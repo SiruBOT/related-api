@@ -1,0 +1,27 @@
+{
+  "name": "related-api",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "REST api for @sirubot/yt-related-scraper",
+  "main": "dist/index.js",
+  "repository": "https://github.com/SiruBOT/related-api",
+  "author": "Park Seonu <cotwo0139@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@sirubot/yt-related-scraper": "^0.3.21",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.26.2",
+    "pino": "^9.0.0",
+    "pino-pretty": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --sourcemap --format esm --out-dir dist",
+    "watch": "tsup src/index.ts --sourcemap --format esm --out-dir dist --watch",
+    "start": "node dist/index.js"
+  }
+}
